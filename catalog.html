@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
@@ -107,10 +108,10 @@
             </ul>
           </fieldset>
 
-          <button class="button" type="submit">ПРИМЕНИТЬ</button>
-          <button class="button" type="reset">Сбросить</button>
+          <button class="button-submit" type="submit">ПРИМЕНИТЬ</button>
+          <button class="button-reset" type="reset">Сбросить</button>
         </form>
-        <b>Найдено гостиниц: 38</b>
+        <b class="result">Найдено гостиниц: 38</b>
         <select class="select-control" aria-label="Сортировка">
           <option value="cheap">Сначала дешёвое</option>
         </select>
@@ -123,7 +124,7 @@
         <a class="button" href="#">
           <span class="visually-hidden">Показать список</span>
         </a>
-        <ul>
+        <ul class="product-card-list">
           <li class="product-card">
             <a class="product-card-link" href="#">
               <img class="product-card-image" src="images/catalog/hotel-1.jpg" width="299" height="206" alt="Скала">
@@ -208,10 +209,10 @@
           <option value="four">4</option>
         </select>
       </section>
-      <section class="mailing">
+      <section class="mailing-inner">
         <h2 class="page-mailing">Подпишитесь на рассылку</h2>
-        <b>Только полезная информация и никакого спама,
-          честное бойскаутское!</b>
+        <p>Только полезная информация и никакого спама,
+          честное бойскаутское!</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
           <input type="text" name="subscription-email" placeholder="Ваш e-mail">
           <button class="button" type="submit">ПОДПИСАТЬСЯ</button>
