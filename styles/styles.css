@@ -14,7 +14,16 @@
     font-display: swap;
   }
 
+  html {
+    height: 100%;
+  }
+  
+
   body {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    min-height: 100%;
     font-family: "PT Sans", sans-serif;
     font-size: 22px;
     line-height: 36px;
@@ -25,6 +34,28 @@
   .page-header {
     color: #000000;
     background-color: #ffffff;
+  }
+
+  .navigation {
+    display: flex;
+    width: 1060px;
+    margin: 0 auto;
+  }
+
+  .navigation-logo {
+    width: 139px;
+    margin-right: 30px;
+  }
+
+  .navigation-list {
+    width: 345px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navigation-user {
+    max-width: 264px;
+    margin-left: auto;
   }
 
   .navigation-link {
@@ -55,21 +86,44 @@
     color: #000000;
   }
 
+  .main-container {
+    flex-grow: 1;
+  }
+
   .main-index {
     color: #000000;
     background-color: #ffffff;
+  }
+
+  .greeting {
     background-image: url(../images/main/index-background.jpg);
     background-size: 100% auto;
     background-repeat: no-repeat;
-    
   }
 
   .main-inner {
     color: #000000;
     background-color: #ffffff;
+  }
+
+  .filter-container {
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
     background-image: url(../images/catalog/catalog-background-1.jpg);
     background-size: 100% auto;
     background-repeat: no-repeat;
+    margin: 0 auto;
+  }
+
+  .page-container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto;
   }
 
   .slogan {
@@ -93,16 +147,56 @@
   }
 
   .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    justify-content: flex-start;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
     text-align: center;
-    color: #333333
+    color: #333333;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .product-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1056px;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .product-card {
+    width: 340px;
+    margin-right: 18px;
+  }
+
+  .product-card:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .upload-container {
+    width: 1056px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+
+  .advantages-item {
+    width: 400px;
   }
 
   .advantages-item-photo {
     color: #ffffff;
     background-color: #83b3d3;
+    width: 400px;
+  }
+
+  .photo-advantages {
+    width: 800px;
   }
 
   .advantages-item-photo h3 {
@@ -120,12 +214,15 @@
     color: #000000;
   }
 
+  .hotel-search {
+    text-align: center;
+  }
+
   .page-search {
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
     color: #000000;
-    text-align: center;
     text-transform: uppercase;
   }
 
@@ -134,7 +231,6 @@
     line-height: 26px;
     font-weight: 400;
     color: #333333;
-    text-align: center;
   }
 
   .hotel-search a {
@@ -147,7 +243,6 @@
     text-decoration: none;
   }
 
-
   .mailing {
     font-weight: 400;
     color: #ffffff;
@@ -159,6 +254,7 @@
     line-height: 26px;
     text-align: center;
   }
+
 
   .mailing-inner {
     font-weight: 400;
@@ -193,6 +289,28 @@
     background-color: #ffffff;
   }
 
+  .page-footer-container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-social {
+    width: 107px;
+    margin-right: 61px;
+  }
+
+  .footer-contacts {
+    width: 720px;
+    margin-right: 53px;
+    text-align: center;
+  }
+
+  .footer-contacts-logo {
+    width: 115px;
+    margin-right: 72px;
+  }
+
   .footer-contacts-phone {
     font-weight: 400;
     font-size: 40px;
@@ -203,6 +321,7 @@
   }
 
   .inner-header {
+    width: 1200px;
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
@@ -215,11 +334,23 @@
     line-height: 78px;
   }
 
+  .sorting-container {
+    width: 1056px;
+    margin: 0 auto;
+  }
+
   .catalog-hotel {
     font-weight: 400;
     font-size: 18px;
     line-height: 23px;
     color: #ffffffff
+  }
+
+  .filter-container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
   }
 
   .catalog-filter-title {
