@@ -93,18 +93,27 @@
   .main-index {
     color: #000000;
     background-color: #ffffff;
+  }
+
+  .greeting {
     background-image: url(../images/main/index-background.jpg);
     background-size: 100% auto;
     background-repeat: no-repeat;
-    
   }
 
   .main-inner {
     color: #000000;
     background-color: #ffffff;
+  }
+
+  .filter-container {
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
     background-image: url(../images/catalog/catalog-background-1.jpg);
     background-size: 100% auto;
     background-repeat: no-repeat;
+    margin: 0 auto;
   }
 
   .page-container {
@@ -140,12 +149,14 @@
   .advantages-list {
     display: flex;
     flex-wrap: wrap;
+    width: 1200px;
+    justify-content: flex-start;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
     text-align: center;
     color: #333333;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
   }
 
@@ -153,13 +164,18 @@
     display: flex;
     flex-wrap: wrap;
     width: 1056px;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin: 0 auto;
     padding: 0;
   }
 
   .product-card {
-    width: 340;
+    width: 340px;
+    margin-right: 18px;
+  }
+
+  .product-card:nth-child(3n) {
+    margin-right: 0;
   }
 
   .upload-container {
@@ -177,6 +193,10 @@
     color: #ffffff;
     background-color: #83b3d3;
     width: 400px;
+  }
+
+  .photo-advantages {
+    width: 800px;
   }
 
   .advantages-item-photo h3 {
@@ -301,6 +321,7 @@
   }
 
   .inner-header {
+    width: 1200px;
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
