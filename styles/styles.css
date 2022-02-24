@@ -76,6 +76,7 @@
   .navigation-user .navigation-link {
     min-width: 42px;
     min-height: 66px;
+    box-sizing: border-box;
   }
 
   .navigation-link {
@@ -124,7 +125,7 @@
     background-image: url(../images/main/index-background.jpg);
     background-size: 100% auto;
     background-repeat: no-repeat;
-    padding-top: 64px; 
+    padding-top: 46px; 
   }
 
   .main-inner {
@@ -204,11 +205,56 @@
     justify-content: flex-start;
     margin: 0 auto;
     padding: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #333333;
+    list-style-type: none;
   }
 
   .product-card {
+    display: flex;
+    flex-direction: column;
     width: 340px;
     margin-right: 18px;
+  }
+
+  .product-card-content {
+    padding: 20px;
+  }
+
+  .price {
+    display: flex;
+    margin-bottom: 16px;
+  }
+
+  .product-card-hotel {
+    margin: 0;
+  }
+
+  .product-card-price {
+    margin: 0;
+  }
+
+  .product-rating {
+    margin: 0;
+  }
+
+  .card-button {
+    margin-bottom: 16px;
+  }
+
+  .rating {
+    display: flex;
+  }
+
+  .product-card-image {
+    margin-bottom: 16px;
+  }
+
+  .product-card-link h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
   }
 
   .product-card:nth-child(3n) {
@@ -232,6 +278,15 @@
     width: 400px;
   }
 
+  .advantages-content {
+    padding: 0 75px;
+    padding-bottom: 79px;
+  }
+
+  .photo {
+    padding: 0 90px;
+  }
+
   .photo-advantages {
     width: 800px;
   }
@@ -251,7 +306,18 @@
   }
 
   .advantages-description {
-    margin: 0;
+    margin-top: 0;
+  }
+
+  .number-3,
+  .number-5,
+  .housing,
+  .souvenirs {
+    background-color: hsl(204 48% 67% / 0.12);
+  }
+
+  .number-4 {
+    background-color: hsl(204 48% 67% / 0.2);
   }
 
   .advantages-title {
@@ -261,8 +327,10 @@
     text-transform: uppercase;
     color: #000000;
     margin-top: 98px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
+
+  
 
 
   .hotel-search {
@@ -311,7 +379,10 @@
     font-size: 22px;
     line-height: 26px;
     text-align: center;
+    padding-top: 94px;
     padding-bottom: 94px;
+    padding-left: 200px;
+    padding-right: 200px;
   }
   .mailing p {
     margin-top: 0;
@@ -326,6 +397,16 @@
     font-size: 22px;
     line-height: 26px;
     text-align: center;
+    padding-bottom: 140px;
+  }
+
+  .mailing-inner h2 {
+    margin-bottom: 46px;
+  }
+
+  .mailing-inner p {
+    margin-top: 0;
+    margin-bottom: 46px;
   }
 
   .page-mailing {
@@ -333,7 +414,7 @@
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
-    margin-top: 94px;
+    margin-top: 0;
     margin-bottom: 29px;
   }
 
@@ -358,6 +439,7 @@
     display: flex;
     width: 1200px;
     margin: 0 auto;
+    background-color: #ffffff;
     
   }
 
@@ -506,13 +588,6 @@
     color: #000000
   }
 
-  .product-card-list {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 23px;
-    color: #333333;
-    list-style-type: none;
-  }
 
   .product-card-link {
     font-weight: 700;
@@ -562,6 +637,7 @@
 
   .upload-container {
     text-align: center;
+    margin-bottom: 30px;
   }
 
   .upload-container .button {
@@ -573,13 +649,20 @@
 
   .pagination-container {
     display: flex;
-    list-style-type: none;
+    width: 1056px;
+    margin: 0 auto;
+    margin-bottom: 73px;
+  }
+
+  .pagination-container p {
+    margin: 0;
   }
 
   .pagination {
     display: flex;
     margin: 0;
     padding: 0;
+    list-style-type: none;
   }
 
   .pagination-item:not(:last-child) {
