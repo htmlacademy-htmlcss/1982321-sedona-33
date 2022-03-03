@@ -80,6 +80,7 @@
   }
 
   .navigation-link {
+    position: relative;
     display: block;
     padding: 20px 17px;
     font-weight: 700;
@@ -90,6 +91,7 @@
   }
 
   .button-navigation-link {
+    padding: 9px 15px;
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
@@ -109,6 +111,51 @@
     line-height: 26px;
     text-decoration: none;
     color: #000000;
+  }
+
+  .navigation-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  .advantages-icon-1::before {
+    content: url(../images/main/icon-1.svg);
+    position: absolute;
+    top: 89px;
+    left: 163px;
+    right: 163px;
+  }
+
+  .advantages-icon-1 h3 {
+    margin-top: 184px;
+  }
+
+  .advantages-icon-2::before {
+    content: url(../images/main/icon-2.svg);
+    position: absolute;
+    top: 91px;
+    left: 163px;
+    right: 163px;
+  }
+
+  .advantages-icon-2 h3 {
+    margin-top: 184px;
+  }
+
+  .advantages-icon-3::before {
+    content: url(../images/main/icon-3.svg);
+    position: absolute;
+    top: 85px;
+    left: 168px;
+    right: 168px;
+  }
+
+  .advantages-icon-3 h3 {
+    margin-top: 184px;
   }
 
   .main-container {
@@ -270,6 +317,7 @@
 
   .advantages-item {
     width: 400px;
+    position: relative;
   }
 
   .advantages-item-photo {
@@ -368,6 +416,10 @@
     margin-top: 0;
   }
 
+  .button-hotel-search {
+    padding: 15px 0;
+  }
+
 
   .mailing {
     font-weight: 400;
@@ -419,6 +471,7 @@
   }
 
   .button {
+    display: inline-block;
     font-family: inherit;
     font-weight: 700;
     font-size: 20px;
@@ -428,6 +481,7 @@
     background-color: #83b3d3;
     color: #ffffff;
     border: 0;
+    cursor: pointer;
   }
 
   .page-footer a {
@@ -444,8 +498,7 @@
   }
 
   .footer-social {
-    width: 107px;
-    margin-right: 61px;
+    margin: 49px 61px 53px 72px;
   }
 
   .footer-social-list {
@@ -454,6 +507,12 @@
     margin: 0;
     list-style-type: none;
   }
+
+  .tw,
+  .fb {
+    margin-right: 30px;
+  }
+
 
   .footer-social-list .button {
     min-width: 18px;
@@ -579,6 +638,10 @@
     line-height: 39px;
     color: #000000;
     text-transform: uppercase;
+  }
+
+  .sorting-type {
+    margin-right: auto;
   }
 
   .cheap {
