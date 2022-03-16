@@ -351,6 +351,11 @@ body {
   flex-direction: column;
   width: 340px;
   margin-right: 18px;
+  margin-bottom: 10px;
+}
+
+.product-card:nth-child(4) {
+  margin-bottom: 0;
 }
 
 .product-card-content {
@@ -382,29 +387,46 @@ body {
   border-radius: 4px;
   text-align: center;
   margin-left: auto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .product-star {
   margin-top: 10px;
+  margin-right: 7px;
 }
 
 .card-button {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  height: 37px;
 }
 
 .rating {
   display: flex;
 }
 
-.product-card-image {
-  margin-bottom: 16px;
+.product-card-link:hover {
+  opacity: 0.6;
+}
+
+.product-card-link:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.product-card-link:active {
+  opacity: 0.3;
 }
 
 .product-card-link h3 {
-  margin-top: 0;
+  margin-top: 9px;
   margin-bottom: 16px;
+  font-size: inherit;
 }
 
 .product-card:nth-child(3n) {
@@ -806,6 +828,7 @@ input[type="text"]:focus {
 .filter-container {
   display: flex;
   width: 1200px;
+  height: 408px;
 }
 
 .breadcrumbs-item {
@@ -814,7 +837,7 @@ input[type="text"]:focus {
 
 .filter {
   flex-grow: 1;
-  padding: 0 71px 83px;
+  padding: 0 71px 62px;
 }
 
 
@@ -859,7 +882,6 @@ input[type="text"]:focus {
 .control-input {
   font-family: inherit;
   margin: 0;
-  /* border-radius: 4px; */
   width: 20px;
   height: 20px;
   margin-right: 19px;
@@ -885,6 +907,21 @@ input[type="text"]:focus {
   padding: 9px 0 10px;
   margin-bottom: 20px;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-submit:hover {
+  background: #68A2CA;
+}
+
+.button-submit:focus {
+  background: #68A2CA;
+  outline: 3px solid #FFFFFF;
+}
+
+.button-submit:active {
+  background: #68A2CA;
+  opacity: 0.3;
 }
 
 .button-reset {
@@ -897,6 +934,21 @@ input[type="text"]:focus {
   width: 160px;
   padding: 0;
   background-color: transparent;
+  cursor: pointer;
+}
+
+.button-reset:hover {
+  opacity: 0.6;
+}
+
+.button-reset:focus {
+  outline: 3px solid #83B3D3;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.button-reset:active {
+  opacity: 0.3;
 }
 
 
@@ -947,6 +999,50 @@ input[type="text"]:focus {
   text-align: center;
 }
 
+.product-card-button:hover {
+  background: #615048;
+}
+
+.product-card-button:focus {
+  background: #615048;
+  outline: 3px solid #83B3D3;
+}
+
+.product-card-button:active {
+  background: #615048;
+  opacity: 0.3;
+}
+
+.product-card-button-favorites:hover {
+  background: #68A2CA;
+  outline: 1px solid #756257;
+}
+
+.product-card-button-favorites:focus {
+  background: #68A2CA;
+  outline: 3px solid #756257;
+}
+
+.product-card-button-favorites:active {
+  background: #68A2CA;
+  border: 1px solid #756257;
+  opacity: 0.3;
+}
+
+.current:hover {
+  background: #6C9E42;
+}
+
+.current:focus {
+  background: #6C9E42;
+  outline: 3px solid #756257;
+}
+
+.current:focus {
+  background: #6C9E42;
+  opacity: 0.3;
+}
+
 
 .product-card-button-favorites {
   font-weight: 700;
@@ -961,6 +1057,10 @@ input[type="text"]:focus {
   padding-top: 9px;
   padding-bottom: 10px;
   text-align: center;
+}
+
+.current {
+  background: #7DB54F;
 }
 
 .pagination-link {
@@ -992,6 +1092,34 @@ input[type="text"]:focus {
   border-radius: 4px;
 }
 
+.pagination-upload-more:hover {
+  background: #68A2CA;
+}
+
+.pagination-upload-more:focus {
+  background: #68A2CA;
+  outline: 3px solid #756257;
+}
+
+.pagination-upload-more:active {
+  background: #68A2CA;
+  opacity: 0.3;
+}
+
+.pagination-link:hover {
+  background: #68A2CA;
+}
+
+.pagination-link:focus {
+  background: #68A2CA;
+  outline: 3px solid #756257;
+}
+
+.pagination-link:active {
+  background: #68A2CA;
+  opacity: 0.3;
+}
+
 .pagination-container {
   display: flex;
   width: 1056px;
@@ -1018,12 +1146,27 @@ input[type="text"]:focus {
   height: 48px;
   border: 2px solid #E6E6E6;
   padding-left: 19px;
-  font-family: "PT San"s;
+  font-family: "PT San";
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   color: #333333;
 }
+
+.select-control:hover,
+.card-grid-toggle:hover {
+  outline: 2px solid #83B3D3;
+}
+
+.select-control:focus,
+.card-grid-toggle:focus {
+  outline: 2px solid #83B3D3;
+}
+
+.select-control:active {
+  opacity: 0.3;
+}
+
 
 .pagination-select-control {
   box-sizing: border-box;
@@ -1055,7 +1198,7 @@ input[type="text"]:focus {
 
 .pagination-current {
   color: #000000;
-  background-color: #e5e5e5;
+  background: #F2F2F2;
 }
 
 
