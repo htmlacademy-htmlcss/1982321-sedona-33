@@ -904,15 +904,23 @@ input[type="text"]:focus {
   padding-left: 0;
 }
 
-.catalog-control-input:hover {
+.catalog-control-input[type="text"]:hover {
   opacity: 0.6;
   outline: 2px solid #FFFFFF;
+  background: none;
 }
 
-.catalog-control-input:focus {
+.catalog-control-input[type="text"]:focus {
   box-shadow: 0px 0px 0px 3px #81B3D2;
   outline: 2px solid #FFFFFF;
+  background: none;
 }
+
+.catalog-control-input[type="text"]:active {
+  outline: 2px solid #FFFFFF;
+  background: #756257;
+}
+
 
 
 
@@ -971,6 +979,16 @@ input[type="text"]:focus {
   background: rgba(255, 255, 255, 0.6);
 }
 
+.control-input[type="checkbox"]:focus + .control-mark,
+.control-input[type="radio"]:focus + .control-mark {
+  background: rgba(255, 255, 255, 0.6);
+  outline: 3px solid #83B3D3;
+}
+
+.control-input[type="checkbox"]:active + .control-mark {
+  background: rgba(255, 255, 255, 0.3);
+}
+
 
 .control-input:disabled + .control-mark {
   background: #FFFFFF;
@@ -980,7 +998,12 @@ input[type="text"]:focus {
 .control-input[type="checkbox"]:checked + .control-mark::after {
   position: absolute;
   content: "";
-  background: url(../images/catalog/tick-1.svg) no-repeat;
+  background: url(../images/catalog/tick-1.svg) center center no-repeat;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 1px;
 }
 
 .control-input[type="radio"] + .control-mark {
@@ -1005,19 +1028,6 @@ input[type="text"]:focus {
   cursor: pointer;
 }
 
-
-.control-input:hover {
-  background: rgba(255, 255, 255, 0.6);
-}
-
-.control-input:focus {
-  background: rgba(255, 255, 255, 0.6);
-  outline: 3px solid #83B3D3;
-}
-
-.control-input:active {
-  background: rgba(255, 255, 255, 0.3);
-}
 
 .catalog-control-range {
   margin: 0;
@@ -1648,18 +1658,81 @@ input[type="text"]:focus {
 .background-tooltip {
   position: absolute;
   background: #83B3D3;
-  top: 14px;
-  left: 54px;
+  top: 3px;
+  left: 3px;
   width: 25px;
   height: 25px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
-.icon-topoltip {
-  position: absolute;
-  top: 22px;
-  left: 66px;
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
 }
+
+.background-tooltip:hover {
+  background: #68A2CA;
+}
+
+.tooltip-text {
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: normal;
+  text-transform: none;
+  padding: 15px 18px 18px 22px;
+  border-radius: 10px;
+  display: block;
+  width: 256px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  position: absolute;
+  top: 175%;
+  left: 60%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.tooltip-text:after {
+  content:'';
+  background-image: url("../images/main/tooltip.svg");
+  width: 19px;
+  height: 9px;
+  position:absolute;
+  bottom: 100%;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.tooltip {
+  position: absolute;
+  margin-top: 7px;
+  margin-left: 7px;
+  width: 25px;
+  height: 25px;
+}
+
+
+.icon-tooltip {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  cursor: pointer;
+}
+
+  
 
 
 .modal-container-close {
