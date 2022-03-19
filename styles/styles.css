@@ -1432,7 +1432,7 @@ input[type="text"]:focus {
 
 .pagination-contlor {
   display: flex;
-  font-family: "PT Sans";
+  font-family: "PT Sans" sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
