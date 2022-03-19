@@ -338,7 +338,7 @@ body {
   flex-wrap: wrap;
   width: 1056px;
   justify-content: flex-start;
-  margin: 0 auto 34px;
+  margin: 0 auto 24px;
   padding: 0;
   font-weight: 400;
   font-size: 18px;
@@ -672,7 +672,7 @@ input[type="text"]:focus {
 }
 
 .footer-social {
-  margin: 49px 61px 53px 72px;
+  margin: 40px 48px 53px 64px;
 }
 
 .footer-social-list {
@@ -687,16 +687,17 @@ input[type="text"]:focus {
   display: block;
 }
 
-.tw,
-.fb {
-  margin-right: 30px;
-}
 
 
 .footer-social-button {
   line-height: initial;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #83B3D3;
+  min-width: 40px;
+  min-height: 40px;
+  margin-right: 3px;
 }
 
 .footer-social-button:hover {
@@ -776,7 +777,7 @@ input[type="text"]:focus {
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
-  padding: 35px 71px 0;
+  padding: 38px 72px 0;
 }
 
 .breadcrumbs {
@@ -812,7 +813,6 @@ input[type="text"]:focus {
   font-size: 60px;
   line-height: 68px;
   margin: 0;
-  margin-bottom: 5px;
 }
 
 .sorting-container {
@@ -842,13 +842,13 @@ input[type="text"]:focus {
 }
 
 .hotel-catalog {
-  padding: 44px 72px 30px;
+  padding: 44px 72px 20px;
+  margin-bottom: 10px;
 }
 
 .filter-container {
   display: flex;
   width: 1200px;
-  height: 408px;
 }
 
 .breadcrumbs-item {
@@ -857,7 +857,7 @@ input[type="text"]:focus {
 
 .filter {
   flex-grow: 1;
-  padding: 0 71px 62px;
+  padding: 0 72px 71px;
 }
 
 
@@ -881,12 +881,16 @@ input[type="text"]:focus {
 }
 
 .catalog-filter-group:nth-child(2) {
-  margin-right: 167px;
+  margin-right: 169px;
 }
 
 .catalog-filter-group:nth-child(3) {
   margin-right: auto;
   width: 287px;
+}
+
+.catalog-filter-group:nth-child(3) .catalog-filter-title {
+  margin-bottom: 33px;
 }
 
 .range-container {
@@ -949,6 +953,7 @@ input[type="text"]:focus {
   position: relative;
   display: block;
   padding-left: 39px;
+  cursor: pointer;
 }
 
 
@@ -970,7 +975,6 @@ input[type="text"]:focus {
 .control-input:disabled + .control-mark {
   background: #FFFFFF;
 }
-
 
 
 .control-input[type="checkbox"]:checked + .control-mark::after {
@@ -1284,12 +1288,29 @@ input[type="text"]:focus {
 }
 
 .upload-container {
+  position: relative;;
   text-align: center;
+}
+
+.upload-container::before,
+.upload-container::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #E6E6E6;
+}
+
+.upload-container::after {
+  top: 120px;
+
 }
 
 .upload-container .button {
   width: 620px;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 30px;
   padding: 17px 0;
   border-radius: 4px;
@@ -1396,6 +1417,7 @@ input[type="text"]:focus {
   color: #333333;
   appearance: none;
   background: url("../images/catalog/dropdown-1.svg") no-repeat right 20px center;
+  cursor: pointer;
 }
 
 .pagination-contlor {
@@ -1430,6 +1452,7 @@ input[type="text"]:focus {
 .modal {
   position: relative;
   margin: auto;
+  margin-top: auto;
   padding: 62px 70px 70px;
   background-color: #ffffff;
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
@@ -1448,15 +1471,47 @@ input[type="text"]:focus {
   background: #F2F2F2;
   border-radius: 50%;
   border: none;
-  background-image: url("../images/main/close.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   cursor: pointer;
 } 
 
+.modal-close-button:hover {
+  background: #E6E6E6;
+}
+
+.modal-close-button:focus {
+  background: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.modal-close-button:active {
+  background: #E6E6E6;
+  opacity: 0.3;
+}
+
+.modal-close-button::before,
+.modal-close-button::after {
+  position: absolute;
+  top: 26px;
+  left: 20px;
+  width: 13px;
+  height: 1px;
+  content: "";
+  background: #000000;
+}
+
+
+.modal-close-button::before {
+  transform: rotate(45deg);
+}
+
+.modal-close-button::after {
+  transform: rotate(-45deg);
+}
+
+
 .modal-title {
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 58px;
   font-family: "PT Sans", sans-serif;
   font-size: 30px;
   line-height: 40px;
@@ -1472,11 +1527,13 @@ input[type="text"]:focus {
 
 .hotel-search-form {
   display: flex;
+  position: relative;
   flex-wrap: wrap;
 }
 
 .field-group {
   display: flex;
+  position: relative;
   justify-content: space-between;
   font-family: 'PT Sans';
   font-style: normal;
@@ -1488,18 +1545,71 @@ input[type="text"]:focus {
   width: 575px;
 }
 
+.hotel-search-form::after {
+  position: absolute;
+  content: "Мы не можем отправить вас в прошлое.";
+  top: 45px;
+  left: 155px;
+  color: #FF5757;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.hotel-search-form::before {
+  position: absolute;
+  content: "На эти даты есть свободные номера. Пока есть.";
+  top: 135px;
+  left: 155px;
+  color: #333333;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+}
+
 .field-group .hotel-search-form-field {
   width: 420px;
   height: 50px;
-  background: #F2F2F2;
   border-radius: 4px;
   padding-left: 19px;
+  background: #F2F2F2;
 }
+
+.icon-date {
+  position: absolute;
+  right: 17px;
+  cursor: pointer;
+}
+
+.icon-plus {
+  position: absolute;
+  right: 19px;
+  cursor: pointer;;
+}
+
+
+.icon-minus {
+  position: absolute;
+  left: 174px;
+  cursor: pointer;
+}
+
+.field-group:nth-child(4) .icon-minus {
+  left: 116px;
+}
+
 
 .field-group:nth-child(3) .hotel-search-form-field,
 .field-group:nth-child(4) .hotel-search-form-field {
   width: 133px;
+  text-align: center;
+  padding: 0;
 }
+
 
 .field-group:nth-child(3) {
   width: 288px;
@@ -1519,6 +1629,41 @@ input[type="text"]:focus {
   justify-content: center;
   text-decoration: none;
   line-height: 40px;
+}
+
+.hotel-form-search:hover {
+  background: #68A2CA;
+}
+
+.hotel-form-search:focus {
+  background: #68A2CA;
+  outline: 3px solid #756257;
+}
+
+.hotel-form-search:active {
+  opacity: 0.3;
+}
+
+
+.background-tooltip {
+  position: absolute;
+  background: #83B3D3;
+  top: 14px;
+  left: 54px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.icon-topoltip {
+  position: absolute;
+  top: 22px;
+  left: 66px;
+}
+
+
+.modal-container-close {
+  display: none;
 }
 
 
