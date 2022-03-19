@@ -1382,7 +1382,7 @@ input[type="text"]:focus {
   height: 48px;
   border: 2px solid #E6E6E6;
   padding:12px 21px 13px 19px;
-  font-family: "PT San";
+  font-family: "PT San" sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -1419,7 +1419,7 @@ input[type="text"]:focus {
   height: 48px;
   border: 2px solid #E6E6E6;
   padding-left: 17px;
-  font-family: "PT Sans";
+  font-family: "PT Sans" sans-serif; 
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -1545,7 +1545,7 @@ input[type="text"]:focus {
   display: flex;
   position: relative;
   justify-content: space-between;
-  font-family: 'PT Sans';
+  font-family: 'PT Sans' sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -1561,7 +1561,7 @@ input[type="text"]:focus {
   top: 45px;
   left: 155px;
   color: #FF5757;
-  font-family: 'PT Sans';
+  font-family: 'PT Sans' sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1574,7 +1574,7 @@ input[type="text"]:focus {
   top: 135px;
   left: 155px;
   color: #333333;
-  font-family: 'PT Sans';
+  font-family: 'PT Sans'sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
