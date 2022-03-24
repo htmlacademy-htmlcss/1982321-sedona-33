@@ -648,6 +648,10 @@ input[type="text"]:focus {
   outline: 3px solid #83B3D3;
 }
 
+.subscription-form input[type="text"].error {
+  box-shadow: inset 0px 0px 0px 2px #FF5757;
+}
+
 .button[type="submit"] {
   width: 200px;
   height: 60px;
@@ -1555,6 +1559,17 @@ input[type="text"]:focus {
   flex-wrap: wrap;
 }
 
+button.hotel-form-search[type="submit"] {
+  display: flex;
+  font-family: inherit;
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  justify-content: center;
+  text-decoration: none;
+  line-height: 40px;
+}
+
 .field-group {
   display: flex;
   position: relative;
@@ -1589,6 +1604,8 @@ input[type="text"]:focus {
 .plus-button {
   position: absolute;
   right: 19px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -1600,6 +1617,8 @@ input[type="text"]:focus {
 .minus-button {
   position: absolute;
   left: 174px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -1607,42 +1626,81 @@ input[type="text"]:focus {
   margin: 0;
   display: block;
 }
+.minus-button:focus,
+.plus-button:focus {
+  outline: 3px solid #83B3D3;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.minus-button:active,
+.plus-button:active {
+  outline: none;
+}
 
 .field-group:nth-child(4) .minus-button {
   left: 116px;
 }
 
-.icon-plus,
 .icon-minus {
-  width: 100%;
-  height: 100%;
+  width: 13px;
+  height: 1px;
+  margin: auto;
   display: block;
+  opacity: 0.3;
 }
 
-.hotel-search-form::after {
+.icon-plus {
+  width: 13px;
+  height: 13px;
+  margin:auto;
+  display: block;
+  opacity: 0.3;
+}
+
+.icon-plus:hover,
+.icon-minus:hover {
+  opacity: 1;
+}
+
+.icon-plus:focus,
+.icon-minus:focus {
+  opacity: 1;
+}
+
+.icon-plus:active,
+.icon-minus:active {
+  opacity: 0.3;
+}
+
+
+
+.error-text {
   position: absolute;
-  content: "Мы не можем отправить вас в прошлое.";
   top: 45px;
   left: 155px;
   color: #FF5757;
-  font-family: 'PT Sans' sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 40px;
+  display: none;
 }
 
-.hotel-search-form::before {
+.error + .error-text {
+  display: block;
+}
+
+.info-text {
   position: absolute;
-  content: "На эти даты есть свободные номера. Пока есть.";
-  top: 135px;
+  top: 45px;
   left: 155px;
-  color: #333333;
-  font-family: 'PT Sans'sans-serif;
+  color: rgb(51, 51, 51);
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 40px;
+  display: none;
 }
 
 .field-group .hotel-search-form-field {
