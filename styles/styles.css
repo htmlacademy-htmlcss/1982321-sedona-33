@@ -245,9 +245,9 @@ body {
   margin-top: 184px;
 }
 
-.advantages-icon-1 .advantages-content,
-.advantages-icon-2 .advantages-content,
-.advantages-icon-3 .advantages-content {
+.advantages-icon-1.advantages-content,
+.advantages-icon-2.advantages-content,
+.advantages-icon-3.advantages-content {
   padding-bottom: 72px;
 }
 
