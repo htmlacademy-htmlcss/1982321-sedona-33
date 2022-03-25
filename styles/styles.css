@@ -245,6 +245,12 @@ body {
   margin-top: 184px;
 }
 
+.advantages-icon-1 .advantages-content,
+.advantages-icon-2 .advantages-content,
+.advantages-icon-3 .advantages-content {
+  padding-bottom: 72px;
+}
+
 .main-container {
   flex-grow: 1;
 }
@@ -469,7 +475,7 @@ body {
 
 .advantages-content {
   padding: 0 75px;
-  padding-bottom: 79px;
+  padding-bottom: 87px;
 }
 
 .photo {
@@ -734,7 +740,7 @@ input[type="text"]:focus {
 }
 
 .footer-contacts-logo {
-  margin-right: 49px;
+  margin-right: 50px;
   margin-top: 23px;
   margin-bottom: 25px;
 }
@@ -750,7 +756,7 @@ input[type="text"]:focus {
 .footer-contacts-logo:focus {
   outline: 3px solid #83B3D3;
   box-sizing: border-box;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 .footer-contacts-logo:active {
